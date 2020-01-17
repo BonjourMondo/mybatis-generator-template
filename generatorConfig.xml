@@ -14,22 +14,34 @@
         </plugin>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/foodie-shop-dev"
+                        connectionURL="jdbc:mysql://localhost:3306/foodie-shop-dev?useSSL=false"
                         userId="root"
-                        password="root">
+                        password="woshixiao">
         </jdbcConnection>
 
-        <!-- 对应生成的pojo所在包 -->
+        <!--&lt;!&ndash; 对应生成的pojo所在包 &ndash;&gt;-->
         <javaModelGenerator targetPackage="com.imooc.pojo" targetProject="src/main/java"/>
 
 		<!-- 对应生成的mapper所在目录 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
 
-		<!-- 配置mapper对应的java映射 -->
+		<!--&lt;!&ndash; 配置mapper对应的java映射 &ndash;&gt;-->
         <javaClientGenerator targetPackage="com.imooc.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
         <!-- 数据库表 -->
-		<table tableName=""></table>
+		<table tableName="carousel"></table>
+        <table tableName="category"></table>
+        <table tableName="users"></table>
+        <table tableName="user_address"></table>
+        <table tableName="items"></table>
+        <table tableName="items_img"></table>
+        <table tableName="items_spec"></table>
+        <table tableName="items_param"></table>
+        <table tableName="items_comments"></table>
+        <table tableName="orders"></table>
+        <table tableName="order_items"></table>
+        <table tableName="order_status"></table>
+
 
     </context>
 </generatorConfiguration>
